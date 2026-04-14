@@ -1,0 +1,20 @@
+export const BUSINESS = {
+  name: 'Pro Paving and Landscaping',
+  shortName: 'Pro Paving & Landscaping',
+  phone: '07747 193288',
+  phoneHref: 'tel:07747193288',
+  whatsappHref: 'https://wa.me/447747193288',
+  email: 'info@propaving-landscaping.co.uk',
+  emailHref: 'mailto:info@propaving-landscaping.co.uk',
+  address: {
+    street: '33 Grovelands Way',
+    city: 'Grays',
+    county: 'Essex',
+    postcode: 'RM17 5YQ',
+    country: 'UK',
+    full: '33 Grovelands Way, Grays, Essex RM17 5YQ',
+  },
+  coverage: 'London, Essex and Kent',
+  companyNumber: '10273903',
+  tagline: 'Best Landscaping Service In London, Essex and Kent',
+} as const;

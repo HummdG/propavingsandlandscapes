@@ -1,0 +1,50 @@
+import { GalleryImage } from '@/types';
+
+const altTexts = [
+  'Garden transformation by Pro Paving & Landscaping',
+  'Paving and landscaping work in Essex',
+  'Beautiful garden makeover project',
+  'Patio installation with natural stone slabs',
+  'Garden landscaping in London',
+  'Block paving driveway project',
+  'Decorative path and blockwork installation',
+  'Professional garden redesign',
+  'Sandstone patio and garden work',
+  'Driveway and fencing installation',
+  'Garden transformation with new turf',
+  'Paving and patio work in Kent',
+  'Landscaping project with decorative slabs',
+  'Front garden paving by Pro Paving',
+  'Garden clearance and redesign',
+  'Professional patio extension',
+  'Block paving installation Essex',
+  'Garden landscaping project completed',
+  'Decorative paving and path work',
+  'Driveway installation in London',
+  'Garden transformation with stonework',
+  'Patio and garden redesign project',
+  'Fencing and driveway installation',
+  'Natural stone paving project',
+  'Garden makeover with paving slabs',
+  'Professional landscaping work',
+  'Driveway and garden transformation',
+  'Paving installation by expert team',
+  'Garden landscaping with sandstone',
+  'Block paving and garden work',
+  'Patio construction and landscaping',
+  'Garden design and installation',
+  'Recent landscaping project 2024',
+  'Garden transformation completed 2024',
+  'Paving and landscaping work 2024',
+  'Professional garden redesign 2024',
+  'Outdoor space transformation 2024',
+];
+
+export const allGalleryImages: GalleryImage[] = Array.from({ length: 37 }, (_, i) => ({
+  src: `/assets/propaving/gallery-${String(i + 1).padStart(2, '0')}.jpg`,
+  alt: altTexts[i] ?? `Pro Paving & Landscaping project ${i + 1}`,
+  width: 1280,
+  height: 960,
+}));
+
+export const heroGalleryImages = allGalleryImages.slice(0, 12);

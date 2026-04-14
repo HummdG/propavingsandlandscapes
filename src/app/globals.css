@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  /* Premium palette — British Garden Atelier */
+  --color-parchment: #F6F1E8;
+  --color-parchment-dark: #EDE4D3;
+  --color-stone: #D9CEBA;
+  --color-forest: #1B2F1D;
+  --color-forest-mid: #2A4A2E;
+  --color-forest-light: #3D6B43;
+  --color-sage: #6B8F6B;
+  --color-gold: #9E7B41;
+  --color-gold-light: #C4A265;
+  --color-charcoal: #1A1A18;
+  --color-ink: #2C2C28;
+  --color-mist: #F2EEE7;
+
+  /* Font system */
+  --font-display: var(--font-cormorant), 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: var(--font-dm-sans), 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-dm-sans), 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-cormorant), 'Playfair Display', Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #F6F1E8;
+    color: #1A1A18;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+/* Decorative grain overlay */
+.grain-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: multiply;
+}
+
+/* Gold divider utility */
+.gold-rule {
+  width: 3rem;
+  height: 1px;
+  background: linear-gradient(90deg, #9E7B41, #C4A265, #9E7B41);
+}
+
+/* Serif italic display */
+.display-italic {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* Animated underline on nav links */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #9E7B41;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
