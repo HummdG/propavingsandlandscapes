@@ -47,21 +47,12 @@ export const metadata: Metadata = {
     title: 'Pro Paving & Landscaping | Driveways, Gardens & Patios',
     description:
       'Professional landscaping, paving, and driveway specialists. Transform your outdoor space today. Serving London, Essex and Kent.',
-    images: [
-      {
-        url: '/assets/propaving/gallery-01.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Pro Paving and Landscaping — Garden Transformations',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Pro Paving & Landscaping | Driveways, Gardens & Patios',
     description:
       'Professional landscaping, paving, and driveway specialists in London, Essex and Kent.',
-    images: ['/assets/propaving/gallery-01.jpg'],
   },
   robots: {
     index: true,
